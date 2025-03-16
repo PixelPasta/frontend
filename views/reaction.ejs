@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Alert</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Space between elements */
+      }
+      h1 {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px red, 0 0 20px red;
+      }
+      .siren {
+        width: 100px;
+        animation: flash 0.5s infinite alternate;
+      }
+      @keyframes flash {
+        from {
+          filter: brightness(1);
+        }
+        to {
+          filter: brightness(2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="siren"
+        src="https://i.giphy.com/f4z6vCWrGcMw6xRlOA.webp"
+        alt="Siren"
+      />
+      <h1><%= reaction %></h1>
+      <img
+        class="siren"
+        src="https://i.giphy.com/f4z6vCWrGcMw6xRlOA.webp"
+        alt="Siren"
+      />
+    </div>
+  </body>
+</html>
