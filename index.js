@@ -1,6 +1,6 @@
-const fetch = require("node-fetch");
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 // app.use(express.static("public"));
@@ -17,6 +17,6 @@ app.use("/", async (req, res) => {
   res.render("index");
 });
 
-app.listen(3000, async () => {
-  console.log(`Listening on http://localhost:3000/`);
+app.listen(PORT, async () => {
+  console.log(`Listening on ${PORT}`);
 });
